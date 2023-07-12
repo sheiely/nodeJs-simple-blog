@@ -1,0 +1,26 @@
+<div class="jumbotron">
+    <h1 class="display-4">Welcome do the Node Blog</h1>
+    <p class="lead">This is a simple blog, developed with Node.js using technologies like Express e mongoose</p>
+    <hr class="my-4">
+    <p>Here you will know about the world of technologies</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="user/signup" role="button">Sing Up</a>
+    </p>
+</div>
+<hr>
+<h2>Postagens recentes</h2>
+{{#each posts}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{tittle}}</h4>
+            <p>{{description}}</p>
+            <a href="/post/{{slug}}"><button class="btn btn-success">Read more</button></a>
+            <hr>
+            <small>Category: {{category.name}}</small><br>
+            <small>Publication date: {{date}}</small>
+            
+        </div>
+    </div>
+{{else}}
+    <p>No post</p>
+{{/each}}
